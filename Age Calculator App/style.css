@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+
+:root {
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+
+body {
+    background: var(--Light-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+}
+
+main {
+    width: 600px;
+    background: #fff;
+    border-radius: 20px 20px 100px 20px;
+   
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    display: flex;
+    gap: 20px;
+}
+
+.dob-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.dob-wrapper label {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input {
+    width: 100px;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--Light-grey);
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.submit-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.submit-wrapper hr {
+    width: 100%;
+}
+
+.submit-wrapper .submit-btn {
+    border-radius: 50%;
+    padding: 14px;
+    background-color: var(--Purple);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-age h1 {
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.current-age span {
+    color: var(--Purple);
+}
+
+small {
+    color: var(--Light-red);
+}
+
+
+footer { 
+    margin-top: 10px;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+
+
+
+/* media querry */
+
+@media screen and (max-width: 680px) {
+    main {
+        width: 360px;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    .form-container {
+        margin-bottom: 70px;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .submit-wrapper {
+        position: relative;
+    }
+
+    .submit-wrapper .submit-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .current-age {
+        margin-top: 70px;
+    }
+
+    .current-age h1 {
+        font-size: 50px;
+    }
+
+
+}

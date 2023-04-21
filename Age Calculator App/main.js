@@ -75,4 +75,14 @@ function handleSubmit(e) {
         
         
     }
+    
+     // clears input on submit
+   document.addEventListener('submit', 
+    function (event) {
+
+    event.preventDefault();
+
+    event.target.reset();
+
+});
 }
